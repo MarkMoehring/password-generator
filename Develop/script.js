@@ -1,9 +1,26 @@
 // Assignment code here
-var criteria = function() {
-  alert("First, let's determine the criteria for your new password.");
-  prompt("How many characters long should your password be?  Please enter a number between from 8-128.");
+var production = function generatePassword() {
+  var inputLength = window.prompt("Ok, first, let's determine what criteria your password will need to meet. Enter your desired password length of characters from 8-128.");
 
-}
+  if (inputLength) {
+    console.log("Good number");
+    
+  } else {
+      console.log("Nope!  Try again.");
+      alert("You must enter a number from 8-128.");
+      generatePassword();
+  }
+  
+  
+  
+
+  
+   
+};
+  
+//generatePassword()  
+//var specchar = !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -18,4 +35,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", criteria);
+generateBtn.addEventListener("click", production);
